@@ -1,10 +1,430 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>My First HTML Page</title>
-</head>
-<body>
-  <h1>Hello, World!</h1>
-  <p>This is a simple HTML page.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BiteBloom | Food That Feels Like Celebration</title>
+    <meta
+      name="description"
+      content="BiteBloom serves bold, chef-crafted dishes with vibrant flavors, fast delivery, and a warm dining experience."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="#home" class="logo" aria-label="BiteBloom home">
+          <span class="logo-badge">🍽️</span>
+          <span>BiteBloom</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="btn btn-secondary">Log in</button>
+          <button class="btn btn-primary">Order now</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-shell">
+          <div class="hero-copy reveal">
+            <span class="kicker">Fresh from the kitchen</span>
+            <h1>Crave-worthy meals for <span class="accent">every mood</span>.</h1>
+            <p class="lead">
+              Discover vibrant bowls, sizzling grills, and handcrafted desserts made with seasonal ingredients
+              and chef-level passion.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#menu" class="btn btn-primary">Explore menu</a>
+              <a href="#about" class="btn btn-secondary">Our story</a>
+            </div>
+
+            <div class="inline-meta">
+              <div class="meta-pill"><span class="star">★</span> 4.9 rating</div>
+              <div class="meta-pill"><span>🍴</span> 1,200+ orders</div>
+              <div class="meta-pill"><span>⏱️</span> 15 min avg</div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="rating-badge hero-card">
+              <div class="avatar">👨‍🍳</div>
+              <div class="rating-copy">
+                <strong>Chef Rina</strong>
+                <span>Top-rated today</span>
+              </div>
+            </div>
+
+            <div class="feature-panel hero-card">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                alt="Signature burger plate"
+              />
+              <h3>House special</h3>
+              <p>Fire-grilled burger with smoked chili aioli.</p>
+            </div>
+
+            <div class="main-plate">
+              <img
+                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+                alt="Delicious burger"
+              />
+            </div>
+
+            <div class="float-tag">Best seller ⭐</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="features-grid">
+            <article class="feature-card reveal">
+              <div class="feature-icon">🚀</div>
+              <h3>Fast delivery</h3>
+              <p>Hot meals on the move, delivered with speed and care.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">🥬</div>
+              <h3>Fresh ingredients</h3>
+              <p>Seasonal produce and responsibly sourced meats in every plate.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon">🎉</div>
+              <h3>Signature flavors</h3>
+              <p>Bold combinations crafted to make every bite memorable.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="menu">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="kicker">Menu favorites</span>
+              <h2>Pick your mood</h2>
+            </div>
+            <p>From light bites to indulgent comfort food, our menu is built for all-day cravings.</p>
+          </div>
+
+          <div class="menu-toolbar reveal">
+            <div class="filter-group" aria-label="Menu filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="pizza">Pizza</button>
+              <button class="filter-btn" data-filter="sushi">Sushi</button>
+              <button class="filter-btn" data-filter="dessert">Dessert</button>
+              <button class="filter-btn" data-filter="vegan">Vegan</button>
+            </div>
+            <a href="#contact" class="btn btn-secondary">Customize order</a>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-item reveal" data-category="pizza">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80" alt="Truffle mushroom pizza" />
+                <button class="favorite-btn" type="button" aria-label="Add favorite" title="Add to favorites">♡</button>
+              </div>
+              <div class="menu-body">
+                <div class="meta-row">
+                  <span class="tag">Pizza</span>
+                  <span class="price">$18</span>
+                </div>
+                <h3>Truffle Mushroom</h3>
+                <p>Wood-fired crust, creamy ricotta, and caramelized mushrooms.</p>
+                <div class="order-row">
+                  <span class="rating-mini">★ 4.9</span>
+                  <button class="inline-btn">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal" data-category="sushi">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=900&q=80" alt="Salmon sushi platter" />
+                <button class="favorite-btn" type="button" aria-label="Add favorite" title="Add to favorites">♡</button>
+              </div>
+              <div class="menu-body">
+                <div class="meta-row">
+                  <span class="tag">Sushi</span>
+                  <span class="price">$22</span>
+                </div>
+                <h3>Salmon Glow Roll</h3>
+                <p>Fresh salmon, avocado, and citrus sesame glaze.</p>
+                <div class="order-row">
+                  <span class="rating-mini">★ 4.8</span>
+                  <button class="inline-btn">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal" data-category="vegan">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?auto=format&fit=crop&w=900&q=80" alt="Vegan bowl" />
+                <button class="favorite-btn" type="button" aria-label="Add favorite" title="Add to favorites">♡</button>
+              </div>
+              <div class="menu-body">
+                <div class="meta-row">
+                  <span class="tag">Vegan</span>
+                  <span class="price">$16</span>
+                </div>
+                <h3>Sunrise Power Bowl</h3>
+                <p>Quinoa, roasted sweet potato, greens, and tahini drizzle.</p>
+                <div class="order-row">
+                  <span class="rating-mini">★ 4.9</span>
+                  <button class="inline-btn">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal" data-category="dessert">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80" alt="Chocolate dessert" />
+                <button class="favorite-btn" type="button" aria-label="Add favorite" title="Add to favorites">♡</button>
+              </div>
+              <div class="menu-body">
+                <div class="meta-row">
+                  <span class="tag">Dessert</span>
+                  <span class="price">$12</span>
+                </div>
+                <h3>Dark Chocolate Lava</h3>
+                <p>Warm molten center with roasted hazelnut and sea salt.</p>
+                <div class="order-row">
+                  <span class="rating-mini">★ 5.0</span>
+                  <button class="inline-btn">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal" data-category="pizza">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1548365328-9f547fb9587c?auto=format&fit=crop&w=900&q=80" alt="Pepperoni pizza" />
+                <button class="favorite-btn" type="button" aria-label="Add favorite" title="Add to favorites">♡</button>
+              </div>
+              <div class="menu-body">
+                <div class="meta-row">
+                  <span class="tag">Pizza</span>
+                  <span class="price">$20</span>
+                </div>
+                <h3>Firecracker Pepperoni</h3>
+                <p>Spicy pepperoni, basil oil, and a charred blistered crust.</p>
+                <div class="order-row">
+                  <span class="rating-mini">★ 4.7</span>
+                  <button class="inline-btn">Add to cart</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="menu-item reveal" data-category="dessert">
+              <div class="menu-image">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428e0291777?auto=format&fit=crop&w=900&q=80" alt="Berry dessert" />
+                <button class="favorite-btn" type="button" aria-label="Add favorite" title="Add to favorites">♡</button>
+              </div>
+              <div class="menu-body">
+                <div class="meta-row">
+                  <span class="tag">Dessert</span>
+                  <span class="price">$11</span>
+                </div>
+                <h3>Berry Cloud Cake</h3>
+                <p>Fluffy vanilla sponge with berries and whipped mascarpone.</p>
+                <div class="order-row">
+                  <span class="rating-mini">★ 4.8</span>
+                  <button class="inline-btn">Add to cart</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section spotlight" id="about">
+        <div class="container spotlight-grid reveal">
+          <div class="spotlight-image">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+              alt="Chef plating a dish"
+            />
+            <div class="sticker">Chef’s pick</div>
+          </div>
+
+          <div class="spotlight-copy">
+            <span class="kicker">Why choose us</span>
+            <h2>Made for comfort, crafted for flavor.</h2>
+            <p class="lead">
+              We blend community-driven cooking with contemporary presentations so every meal feels both familiar and elevated.
+            </p>
+
+            <ul class="check-list">
+              <li>Locally sourced produce and premium ingredients</li>
+              <li>Balanced menus for adventurous and classic eaters</li>
+              <li>Customizable options for dietary preferences</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary">Book a table</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="kicker">How it works</span>
+              <h2>Simple, tasty, stress-free</h2>
+            </div>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card reveal">
+              <div class="step-number">1</div>
+              <h3>Choose</h3>
+              <p>Pick from signature dishes, seasonal specials, and trending favorites.</p>
+            </article>
+
+            <article class="step-card reveal">
+              <div class="step-number">2</div>
+              <h3>Customize</h3>
+              <p>Add toppings, spice levels, or dietary swaps in seconds.</p>
+            </article>
+
+            <article class="step-card reveal">
+              <div class="step-number">3</div>
+              <h3>Enjoy</h3>
+              <p>Track your order live and enjoy a fresh, perfectly timed delivery.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reviews">
+        <div class="container">
+          <div class="section-header reveal">
+            <div>
+              <span class="kicker">Happy diners</span>
+              <h2>People keep coming back</h2>
+            </div>
+            <p>Real flavor, real service, and meals worth talking about.</p>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="review-card reveal">
+              <div class="review-top">
+                <div class="reviewer">
+                  <div class="reviewer-face">A</div>
+                  <div>
+                    <h3>Alya</h3>
+                  </div>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p>“The truffle pizza was rich, balanced, and honestly one of the best I’ve had this year.”</p>
+            </article>
+
+            <article class="review-card reveal">
+              <div class="review-top">
+                <div class="reviewer">
+                  <div class="reviewer-face">J</div>
+                  <div>
+                    <h3>Jordan</h3>
+                  </div>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p>“Everything arrived warm and beautifully packed. The vegan bowl tastes as good as it looks.”</p>
+            </article>
+
+            <article class="review-card reveal">
+              <div class="review-top">
+                <div class="reviewer">
+                  <div class="reviewer-face">S</div>
+                  <div>
+                    <h3>Sam</h3>
+                  </div>
+                </div>
+                <div class="stars">★★★★★</div>
+              </div>
+              <p>“Fast delivery, generous portions, and a dessert menu that made the whole night feel special.”</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section newsletter" id="contact">
+        <div class="container">
+          <div class="newsletter-box reveal">
+            <div>
+              <h3>Bring the feast home.</h3>
+              <p>Get first access to seasonal specials and member-only deals.</p>
+            </div>
+
+            <form class="newsletter-form" aria-label="Newsletter sign-up form">
+              <input type="email" placeholder="Enter your email" aria-label="Email address" />
+              <button type="submit">Join now</button>
+            </form>
+          </div>
+          <p id="form-message" aria-live="polite" style="margin: 12px 0 0; color: #ffd9a8;"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-card">
+          <a href="#home" class="logo" aria-label="BiteBloom home">
+            <span class="logo-badge">🍽️</span>
+            <span>BiteBloom</span>
+          </a>
+          <p style="color: var(--muted); margin-top: 12px;">
+            Food crafted with mood, comfort, and unforgettable flavor in mind.
+          </p>
+          <div class="socials" aria-label="Social links">
+            <span>◎</span>
+            <span>◌</span>
+            <span>◍</span>
+          </div>
+        </div>
+
+        <div class="footer-card">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-card">
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-card">
+          <h4>Visit</h4>
+          <ul class="footer-links">
+            <li>12 Ember Street</li>
+            <li>Mon-Sun: 9am - 11pm</li>
+            <li>(555) 812-2456</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
